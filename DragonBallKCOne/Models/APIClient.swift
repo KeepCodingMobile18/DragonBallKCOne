@@ -12,6 +12,7 @@ enum NetworkError: Error, Equatable {
     case noData
     case statusCode(code: Int?)
     case decodingError
+    case missingToken
     case unknown
 }
 

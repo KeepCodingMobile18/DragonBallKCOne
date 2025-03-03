@@ -29,7 +29,7 @@ struct APIClient: APIClientProtocol {
     
     func tokenAuthenticated(
         _ request: URLRequest,
-        completion:  @escaping (Result<String,NetworkError>) -> Void
+        completion:  @escaping (Result<String, NetworkError>) -> Void
     ) {
         let task = session.dataTask(with: request) {
             data, response, error in
@@ -60,11 +60,48 @@ struct APIClient: APIClientProtocol {
                 result = .failure(.decodingError)
                 return
             }
+            
             result = .success(token)
         }
         task.resume()
     }
     
-    func request<T>(_ request: URLRequest, using: T.Type, completion: @escaping (Result<T, NetworkError>) -> Void) where T : Decodable {
+    func request<T: Decodable>(
+        _ request: URLRequest,
+        using: T.Type,
+        completion: @escaping (Result<T, NetworkError>) -> Void
+    ) {
+        let task = session.dataTask(with: request) { data, response, error in
+            var result: Result<T, NetworkError> = .failure(.unknown)
+            
+            defer {
+                completion(result)
+            }
+            
+            guard error == nil else {
+                result = .failure(.unknown)
+                return
+            }
+            
+            guard let data else {
+                result = .failure(.noData)
+                return
+            }
+            
+            let statusCode = (response as? HTTPURLResponse)?.statusCode
+            
+            guard statusCode == 200 else {
+                result = .failure(.statusCode(code: statusCode))
+                return
+            }
+            
+            guard let model = try? JSONDecoder().decode(using, from: data) else {
+                result = .failure(.decodingError)
+                return
+            }
+        
+            result = .success(model)
+        }
+        task.resume()
     }
 }

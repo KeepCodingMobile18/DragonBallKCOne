@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct TransformationsModel: Codable {
     let id: String
     let name: String

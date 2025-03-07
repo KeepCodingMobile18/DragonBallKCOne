@@ -20,6 +20,8 @@
 		6FE6C0E02D75506500E40438 /* TransformationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE6C0DF2D75506500E40438 /* TransformationsModel.swift */; };
 		6FE6C0ED2D768C1B00E40438 /* DragonBallKCOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FE6C0EC2D768C1B00E40438 /* DragonBallKCOneViewController.xib */; };
 		6FE6C0EE2D768C1B00E40438 /* DragonBallKCOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE6C0EB2D768C1B00E40438 /* DragonBallKCOneViewController.swift */; };
+		6FE6C0F12D76918900E40438 /* DragonBallKCOneListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FE6C0F02D76918900E40438 /* DragonBallKCOneListViewController.xib */; };
+		6FE6C0F22D76918900E40438 /* DragonBallKCOneListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE6C0EF2D76918900E40438 /* DragonBallKCOneListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		6FE6C0DF2D75506500E40438 /* TransformationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationsModel.swift; sourceTree = "<group>"; };
 		6FE6C0EB2D768C1B00E40438 /* DragonBallKCOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBallKCOneViewController.swift; sourceTree = "<group>"; };
 		6FE6C0EC2D768C1B00E40438 /* DragonBallKCOneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DragonBallKCOneViewController.xib; sourceTree = "<group>"; };
+		6FE6C0EF2D76918900E40438 /* DragonBallKCOneListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBallKCOneListViewController.swift; sourceTree = "<group>"; };
+		6FE6C0F02D76918900E40438 /* DragonBallKCOneListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DragonBallKCOneListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 		6FE6C0E32D76882400E40438 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6FE6C0EF2D76918900E40438 /* DragonBallKCOneListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				6FE6C0EC2D768C1B00E40438 /* DragonBallKCOneViewController.xib */,
+				6FE6C0F02D76918900E40438 /* DragonBallKCOneListViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,6 +284,7 @@
 				6FE6C0B22D75314B00E40438 /* Assets.xcassets in Resources */,
 				6FE6C0B52D75314B00E40438 /* Base in Resources */,
 				6FE6C0ED2D768C1B00E40438 /* DragonBallKCOneViewController.xib in Resources */,
+				6FE6C0F12D76918900E40438 /* DragonBallKCOneListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +312,7 @@
 				6FE6C0A92D75314A00E40438 /* AppDelegate.swift in Sources */,
 				6FE6C0AB2D75314A00E40438 /* SceneDelegate.swift in Sources */,
 				6FE6C0DC2D75446B00E40438 /* NetworkModel.swift in Sources */,
+				6FE6C0F22D76918900E40438 /* DragonBallKCOneListViewController.swift in Sources */,
 				6FE6C0DA2D7537F000E40438 /* APIClient.swift in Sources */,
 				6FE6C0DE2D754A6800E40438 /* HeroModel.swift in Sources */,
 				6FE6C0E02D75506500E40438 /* TransformationsModel.swift in Sources */,
